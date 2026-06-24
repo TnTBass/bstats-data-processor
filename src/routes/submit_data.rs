@@ -258,4 +258,29 @@ mod integration_tests {
         let body = test::read_body(resp).await;
         assert_eq!(body, "Service does not belong to this software");
     }
+
+    #[actix_web::test]
+    async fn accepts_fabric_and_updates_global_rollup() {
+        snapshot_state(
+            "fabric_global_rollup",
+            json!({
+                "playerAmount": 12,
+                "onlineMode": 1,
+                "minecraftVersion": "1.21.6",
+                "fabricVersion": "0.16.14",
+                "pluginVersion": "1.0.0-SNAPSHOT",
+                "javaVersion": "21.0.2",
+                "osName": "Linux",
+                "osArch": "amd64",
+                "osVersion": "6.8.0",
+                "coreCount": 8,
+                "service": {
+                    "id": 27401,
+                },
+                "serverUUID": "7386d410-f71e-447c-b356-ee809c7db099",
+                "metricsVersion": "3.0.2"
+            }),
+        )
+        .await;
+    }
 }
