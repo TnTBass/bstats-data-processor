@@ -50,6 +50,14 @@ mod integration_tests {
     /// These snapshots allow us to see if a change to the codebase alters the
     /// data stored in Redis.
     async fn snapshot_state(name: &str, payload: serde_json::Value) {
+        snapshot_state_for_software(name, "bukkit", payload).await;
+    }
+
+    async fn snapshot_state_for_software(
+        name: &str,
+        software_url: &str,
+        payload: serde_json::Value,
+    ) {
         let test_environment = TestEnvironment::with_data().await;
         let redis_pool = test_environment.redis_pool();
         let app = test::init_service(
@@ -62,8 +70,10 @@ mod integration_tests {
         let redis_state_before =
             redis_dump::capture(&mut test_environment.redis_connection().await).await;
 
+        // Existing integration snapshots assume no GeoIP database is loaded,
+        // so location and locationMap charts are absent from Redis diffs.
         let req = test::TestRequest::post()
-            .uri("/bukkit")
+            .uri(&format!("/{software_url}"))
             .peer_addr(SocketAddr::new(IpAddr::V4(Ipv4Addr::new(1, 1, 1, 1)), 1111))
             .insert_header(ContentType::json())
             .set_payload(payload.to_string())
@@ -183,6 +193,32 @@ mod integration_tests {
                     ]
                 },
                 "serverUUID": "7386d410-f71e-447c-b356-ee809c7db098",
+                "metricsVersion": "3.0.2"
+            }),
+        )
+        .await;
+    }
+
+    #[actix_web::test]
+    async fn accepts_neoforge_and_updates_global_rollup() {
+        snapshot_state_for_software(
+            "neoforge_request",
+            "neoforge",
+            json!({
+                "playerAmount": 12,
+                "onlineMode": 1,
+                "minecraftVersion": "1.21.1",
+                "neoforgeVersion": "21.1.172",
+                "javaVersion": "21.0.2",
+                "osName": "Linux",
+                "osArch": "amd64",
+                "osVersion": "6.8.0",
+                "coreCount": 8,
+                "service": {
+                    "pluginVersion": "1.0.0",
+                    "id": 27402,
+                },
+                "serverUUID": "7386d410-f71e-447c-b356-ee809c7db099",
                 "metricsVersion": "3.0.2"
             }),
         )

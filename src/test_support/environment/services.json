@@ -95,5 +95,54 @@
       19,
       20
     ]
+  },
+  {
+    "id": 7,
+    "name": "_neoforge_",
+    "owner": {
+      "name": "Admin"
+    },
+    "software": {
+      "id": 7
+    },
+    "isGlobal": true,
+    "chartIds": [
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+    ]
+  },
+  {
+    "id": 27402,
+    "name": "TestNeoForgeModForIntegrationTests",
+    "owner": {
+      "name": "BtoBastian"
+    },
+    "software": {
+      "id": 7
+    },
+    "isGlobal": false,
+    "chartIds": [
+      335527,
+      335528,
+      335529,
+      335530,
+      335531,
+      335532,
+      335533,
+      335534,
+      335535,
+      335536,
+      335537,
+      335538
+    ]
   }
 ]

@@ -773,5 +773,402 @@
       }
     },
     "serviceId": 27400
+  },
+  {
+    "id": 44,
+    "idCustom": "servers",
+    "type": "single_linechart",
+    "position": 0,
+    "title": "Servers",
+    "isDefault": true,
+    "data": {
+      "lineName": "Servers",
+      "filter": {
+        "enabled": false,
+        "maxValue": 1,
+        "minValue": 1
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 45,
+    "idCustom": "players",
+    "type": "single_linechart",
+    "position": 1,
+    "title": "Players",
+    "isDefault": true,
+    "data": {
+      "lineName": "Players",
+      "filter": {
+        "enabled": true,
+        "maxValue": 200,
+        "minValue": 0
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 46,
+    "idCustom": "onlineMode",
+    "type": "simple_pie",
+    "position": 2,
+    "title": "Online mode",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 47,
+    "idCustom": "minecraftVersion",
+    "type": "simple_pie",
+    "position": 3,
+    "title": "Minecraft Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 48,
+    "idCustom": "neoforgeVersion",
+    "type": "simple_pie",
+    "position": 4,
+    "title": "NeoForge Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 49,
+    "idCustom": "coreCount",
+    "type": "simple_pie",
+    "position": 5,
+    "title": "Core count",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": true,
+        "useRegex": true,
+        "blacklist": false,
+        "filter": [
+          "([0-9]){1,2}"
+        ]
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 50,
+    "idCustom": "osArch",
+    "type": "simple_pie",
+    "position": 6,
+    "title": "System arch",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 51,
+    "idCustom": "os",
+    "type": "drilldown_pie",
+    "position": 7,
+    "title": "Operating System",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 52,
+    "idCustom": "location",
+    "type": "simple_pie",
+    "position": 8,
+    "title": "Server Location",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 53,
+    "idCustom": "javaVersion",
+    "type": "drilldown_pie",
+    "position": 9,
+    "title": "Java Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 54,
+    "idCustom": "locationMap",
+    "type": "simple_map",
+    "position": 10,
+    "title": "Server Location",
+    "isDefault": true,
+    "data": {
+      "valueName": "Servers",
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 7
+  },
+  {
+    "id": 335527,
+    "idCustom": "servers",
+    "type": "single_linechart",
+    "position": 0,
+    "title": "Servers using TestNeoForgeModForIntegrationTests",
+    "isDefault": true,
+    "data": {
+      "lineName": "Servers",
+      "filter": {
+        "enabled": false,
+        "maxValue": 1,
+        "minValue": 1
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335528,
+    "idCustom": "players",
+    "type": "single_linechart",
+    "position": 1,
+    "title": "Players on servers using TestNeoForgeModForIntegrationTests",
+    "isDefault": true,
+    "data": {
+      "lineName": "Players",
+      "filter": {
+        "enabled": true,
+        "maxValue": 200,
+        "minValue": 0
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335529,
+    "idCustom": "onlineMode",
+    "type": "simple_pie",
+    "position": 2,
+    "title": "Online mode",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335530,
+    "idCustom": "minecraftVersion",
+    "type": "simple_pie",
+    "position": 3,
+    "title": "Minecraft Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335531,
+    "idCustom": "neoforgeVersion",
+    "type": "simple_pie",
+    "position": 4,
+    "title": "NeoForge Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335532,
+    "idCustom": "pluginVersion",
+    "type": "simple_pie",
+    "position": 5,
+    "title": "Plugin Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335533,
+    "idCustom": "coreCount",
+    "type": "simple_pie",
+    "position": 6,
+    "title": "Core count",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": true,
+        "useRegex": true,
+        "blacklist": false,
+        "filter": [
+          "([0-9]){1,2}"
+        ]
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335534,
+    "idCustom": "osArch",
+    "type": "simple_pie",
+    "position": 7,
+    "title": "System arch",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335535,
+    "idCustom": "os",
+    "type": "drilldown_pie",
+    "position": 8,
+    "title": "Operating System",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335536,
+    "idCustom": "location",
+    "type": "simple_pie",
+    "position": 9,
+    "title": "Server Location",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335537,
+    "idCustom": "javaVersion",
+    "type": "drilldown_pie",
+    "position": 10,
+    "title": "Java Version",
+    "isDefault": true,
+    "data": {
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
+  },
+  {
+    "id": 335538,
+    "idCustom": "locationMap",
+    "type": "simple_map",
+    "position": 11,
+    "title": "Server Location",
+    "isDefault": true,
+    "data": {
+      "valueName": "Servers",
+      "filter": {
+        "enabled": false,
+        "useRegex": false,
+        "blacklist": false,
+        "filter": []
+      }
+    },
+    "serviceId": 27402
   }
 ]
